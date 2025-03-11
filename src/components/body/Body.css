@@ -1,0 +1,12 @@
+.body {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 160px);
+}
+
+.body h1 {
+  color: #333;
+  margin-top: 0;
+  font-family: 'Rajdhani', sans-serif;
+}
