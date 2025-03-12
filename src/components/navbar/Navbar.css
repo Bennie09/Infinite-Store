@@ -1,5 +1,5 @@
 .navbar {
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: block;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .navbar-nav {
-  margin-left: 15rem;
+  margin-left: 17.5rem;
 }
 
 .nav-item {
