@@ -17,7 +17,7 @@ function Navbar() {
       </div>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Logo
+        <i class="fa-solid fa-infinity"></i> Infinite
         </a>
 
         <button
