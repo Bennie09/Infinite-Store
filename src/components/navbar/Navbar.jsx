@@ -7,10 +7,10 @@ function Navbar() {
         <h4>Contact us 24/7 +1 50 537 53 082</h4>
         <h4>🔥 The Biggest Sale Ever 50% Off</h4>
         <div className="lnks">
-          <a className="lnk-1" href="#">
+          <a className="lnk" href="#">
             Wishlist
           </a>
-          <a className="lnk-2" href="#">
+          <a className="lnk" href="#">
             Account
           </a>
         </div>
@@ -37,9 +37,13 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Store
-              </a>
+              <a href='#' type="button" class="nav-link btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"/></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -56,7 +60,14 @@ function Navbar() {
                 Docs
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Account
+              </a>
+            </li>
           </ul>
+
+          .
 
           <form className="search-form d-flex">
             <input
