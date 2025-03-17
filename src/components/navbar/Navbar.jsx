@@ -36,8 +36,8 @@ function Navbar() {
                 Home
               </a>
             </li>
-            <li className="nav-item">
-              <a href='#' type="button" class="nav-link btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store<i class="fa-solid fa-angle-down"></i></a>
+            <li className="nav-item item-1">
+              <a href='#' type="button" class="nav-link link-2">Store<i class="fa-solid fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -47,29 +47,53 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Products
+                Products <i class="fa-solid fa-angle-down"></i>
               </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"/></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Pages
+                Pages <i class="fa-solid fa-angle-down"></i>
               </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"/></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Account <i class="fa-solid fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"/></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
                 Docs
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Account
-              </a>
-            </li>
           </ul>
 
-          .
+          <div className="navbar-end">
+            <ul>
+              <li><button className='end-link'><i class="fa-regular fa-moon"></i></button></li>
+              <li><button className='end-link'><i class="fa-solid fa-cart-shopping"></i></button></li>
+              <li><button className='end-link'><i class="fa-solid fa-magnifying-glass"></i></button></li>
+            </ul>  
+          </div>         
 
-          <form className="search-form d-flex">
+          {/* <form className="search-form d-flex">
             <input
               className="form-control me-2"
               type="search"
@@ -79,7 +103,7 @@ function Navbar() {
             <button className="btn btn-outline-primary" type="submit">
               Search
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
     </nav>
