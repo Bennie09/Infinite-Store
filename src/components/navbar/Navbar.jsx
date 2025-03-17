@@ -1,4 +1,5 @@
 import './Navbar.css';
+import shopping_cart from './shopping_cart_icon_143698.ico'
 
 function Navbar() {
   return (
@@ -88,8 +89,8 @@ function Navbar() {
           <div className="navbar-end">
             <ul>
               <li><button className='end-link'><i class="fa-regular fa-moon"></i></button></li>
-              <li><button className='end-link'><i class="fa-solid fa-cart-shopping"></i></button></li>
-              <li><button className='end-link'><img src="path/to/your/image.png" alt="My Icon"/></button></li>
+              <li><button className='end-link'><img src={shopping_cart} alt="My Icon"/></button></li>
+              <li><button className='end-link'><i class="fa-solid fa-magnifying-glass"></i></button></li>
             </ul>  
           </div>         
 
