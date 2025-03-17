@@ -89,7 +89,7 @@ function Navbar() {
             <ul>
               <li><button className='end-link'><i class="fa-regular fa-moon"></i></button></li>
               <li><button className='end-link'><i class="fa-solid fa-cart-shopping"></i></button></li>
-              <li><button className='end-link'><i class="fa-solid fa-magnifying-glass"></i></button></li>
+              <li><button className='end-link'><img src="path/to/your/image.png" alt="My Icon"/></button></li>
             </ul>  
           </div>         
 
