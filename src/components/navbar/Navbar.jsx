@@ -88,9 +88,9 @@ function Navbar() {
 
           <div className="navbar-end">
             <ul>
-              <li><button className='end-link'><i class="fa-regular fa-moon"></i></button></li>
-              <li><button className='end-link'><img src={shopping_cart} alt="My Icon"/></button></li>
-              <li><button className='end-link'><i class="fa-solid fa-magnifying-glass"></i></button></li>
+              <li><button className='end-link'><ion-icon name="moon-outline" className="i"></ion-icon></button></li>
+              <li><button className='end-link'><ion-icon name="cart-outline" className="i"></ion-icon></button></li>
+              <li><button className='end-link'><ion-icon name="search-outline" className="i"></ion-icon></button></li>
             </ul>  
           </div>         
 
