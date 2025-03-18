@@ -35,7 +35,7 @@
 }
 
 .navbar-nav {
-  margin-left: 17.5rem;
+  margin-left: 15.7rem;
 }
 
 .nav-item {
@@ -43,8 +43,8 @@
 }
 
 .nav-link {
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem !important;
+  font-size: 16px;
+  padding: 0.5rem 0.9rem !important;
   transition: color 0.3s ease;
 }
 
@@ -54,6 +54,10 @@
 
 /* .nav-link.active {
   color: #0d6efd !important;
+} */
+
+/* .link-2{
+  margin-bottom: 5px;
 } */
 
 .dropdown-menu{
@@ -70,7 +74,7 @@
 
 .nav-item i{
   padding-left: 3px;
-  padding-top: 5px;
+  font-size: 15px;
 }
 
 .search-form {
@@ -81,6 +85,17 @@
 .search-form input {
   min-width: 250px;
 }
+
+.navbar-end ul{
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+}
+
+.navbar-end ul li .end-link{
+  border: none;
+}
+
 
 @media (max-width: 991px) {
   .search-form {
