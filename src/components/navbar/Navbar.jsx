@@ -90,7 +90,7 @@ function Navbar() {
             <ul>
               <li><button className='end-link'><ion-icon name="moon-outline" className="i"></ion-icon></button></li>
               <li><button className='end-link'><ion-icon name="cart-outline" className="i"></ion-icon></button></li>
-              <li><button className='end-link'><ion-icon name="search-outline" className="i"></ion-icon></button></li>
+              <li><button className='end-link'><ion-icon name="search-outline" className="i" id="src-btn"></ion-icon></button></li>
             </ul>  
           </div>         
 
