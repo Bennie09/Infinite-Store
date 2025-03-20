@@ -106,6 +106,7 @@
 .navbar-end ul li .end-link{
   border: none;
   padding: 0 .75rem;
+  background: none;
 }
 
 .end-link .i {
