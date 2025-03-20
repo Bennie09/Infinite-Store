@@ -90,21 +90,25 @@ function Navbar() {
             <ul>
               <li><button className='end-link'><ion-icon name="moon-outline" className="i"></ion-icon></button></li>
               <li><button className='end-link'><ion-icon name="cart-outline" className="i"></ion-icon></button></li>
-              <li><button className='end-link'><ion-icon name="search-outline" className="i" id="src-btn"></ion-icon></button></li>
+              <li><button className='end-link'><ion-icon name="search-outline" className="i" id="src-btn"></ion-icon></button>
+              <ul className='search'>
+                <form className="search-form d-flex">
+                  <input
+                    className="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button className="btn btn-outline-primary" type="submit">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </button>
+                </form>
+              </ul>
+              </li>
             </ul>  
           </div>         
 
-          {/* <form className="search-form d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-primary" type="submit">
-              Search
-            </button>
-          </form> */}
+          {/*  */}
         </div>
       </div>
     </nav>
