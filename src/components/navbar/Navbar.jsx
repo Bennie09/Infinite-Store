@@ -1,7 +1,10 @@
 import './Navbar.css';
-import shopping_cart from './shopping_cart_icon_143698.ico'
+import { useState } from "react";
 
 function Navbar() {
+  const [search, setSearch] = useState("");
+  const [showSearch, setShowSearch] = useState(false);
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="cnt-1">
@@ -18,7 +21,10 @@ function Navbar() {
       </div>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-        <i class="fa-solid fa-infinity"></i> Infinite
+        <div className="navbar-icon">
+          <ion-icon name="infinite-outline" className="nav-icon"></ion-icon> 
+        </div>
+        <h1>Infinite</h1>
         </a>
 
         <button
@@ -90,7 +96,8 @@ function Navbar() {
             <ul>
               <li><button className='end-link'><ion-icon name="moon-outline" className="i"></ion-icon></button></li>
               <li><button className='end-link'><ion-icon name="cart-outline" className="i"></ion-icon></button></li>
-              <li><button className='end-link'><ion-icon name="search-outline" className="i" id="src-btn"></ion-icon></button>
+              <li><button className='end-link' onClick={() => setShowSearch(!showSearch)}><ion-icon name="search-outline" className="i" id="src-btn"></ion-icon></button>
+              {showSearch && (
               <ul className='search'>
                 <form className="search-form d-flex">
                   <input
@@ -98,12 +105,22 @@ function Navbar() {
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
                   />
-                  <button className="btn btn-outline-primary" type="submit">
-                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  {search && ( // Show the icon only when there is text
+                    <ion-icon
+                      name="close-outline"
+                      className="clear-icon"
+                      onClick={() => setSearch("")}
+                    ></ion-icon>
+                  )}
+                  <button className="btn" type="submit">
+                    <ion-icon name="arrow-forward-outline" id="arrow-icon"></ion-icon>
                   </button>
                 </form>
               </ul>
+              )}
               </li>
             </ul>  
           </div>         
