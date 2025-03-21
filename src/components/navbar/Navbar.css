@@ -1,5 +1,6 @@
 .navbar {
-  background-color: #f5f7fa !important;
+  /* background-color: #f5f7fa !important; */
+  background-color: #d7d8db !important;
   padding: 1rem 2rem;
   display: block;
 }
@@ -85,6 +86,24 @@
 
 .dropdown-menu{
   margin-top: 18px;
+  border: none;
+  box-shadow: 0 0 10px #dadada;
+}
+
+.dropdown-menu .dropdown-item{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-container {
+  width: 30px; 
+  text-align: right;
 }
 
 .nav-item:hover .dropdown-menu {
@@ -182,11 +201,14 @@
 
 .search-form input::placeholder{
   font-size: 15px;
+  color: #000;
+  font-weight: 500;
 }
 
 .search-form .btn{
   border-radius: 100%;
-  background: #eee;
+  /* background: #eee; */
+  background-color: #d7d8db;
   align-items: center;
 }
 

@@ -46,10 +46,46 @@ function Navbar() {
             <li className="nav-item item-1">
               <a href='#' type="button" class="nav-link link-2">Store<i class="fa-solid fa-angle-down"></i></a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"/></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-content">
+                        Electronic Store
+                        <span class="arrow-container">
+                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-content">
+                        Fashion Store
+                        <span class="arrow-container">
+                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-content">
+                        Grocery Store
+                        <span class="arrow-container">
+                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="item-content">
+                        Furniture Store
+                        <span class="arrow-container">
+                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
                 </ul>
             </li>
             <li className="nav-item">
@@ -57,11 +93,67 @@ function Navbar() {
                 Products <i class="fa-solid fa-angle-down"></i>
               </a>
               <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"/></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="item-content">
+                      Large House Devices
+                      <span class="arrow-container">
+                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="item-content">
+                      Outdoor Living Products
+                      <span class="arrow-container">
+                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="item-content">
+                      Cooking Essentials
+                      <span class="arrow-container">
+                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="item-content">
+                      Animal Care Products
+                      <span class="arrow-container">
+                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="item-content">
+                      Food Products
+                      <span class="arrow-container">
+                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <span class="item-content">
+                      Self-Care Products
+                      <span class="arrow-container">
+                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
