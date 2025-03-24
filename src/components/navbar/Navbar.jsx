@@ -6,7 +6,7 @@ function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className=" darkmode navbar navbar-expand-lg bg-body-tertiary">
       <div className="cnt-1">
         <h4>Contact us 24/7 +1 50 537 53 082</h4>
         <h4>🔥 The Biggest Sale Ever 50% Off</h4>
@@ -186,7 +186,12 @@ function Navbar() {
 
           <div className="navbar-end">
             <ul>
-              <li><button className='end-link'><ion-icon name="moon-outline" className="i"></ion-icon></button></li>
+              <li>
+                <button className='end-link'>
+                  <ion-icon name="moon-outline" className="i moon"></ion-icon>
+                  <ion-icon name="sunny-outline" className="i sun"></ion-icon>
+                </button>
+              </li>
               <li><button className='end-link'><ion-icon name="cart-outline" className="i"></ion-icon></button></li>
               <li><button className='end-link' onClick={() => setShowSearch(!showSearch)}><ion-icon name="search-outline" className="i" id="src-btn"></ion-icon></button>
               {showSearch && (
