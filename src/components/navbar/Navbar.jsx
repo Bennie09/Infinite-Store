@@ -1,12 +1,58 @@
+import React, { useState, useEffect } from 'react';
+import DropdownMenu from '../../DropdownMenu'; // Corrected import path
 import './Navbar.css';
-import { useState } from "react";
 
-function Navbar() {
+const Navbar = () => {
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem('darkmode') === 'active'
+  );
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('darkmode');
+      localStorage.setItem('darkmode', 'active');
+    } else {
+      document.body.classList.remove('darkmode');
+      localStorage.setItem('darkmode', 'inactive'); // Important to update localStorage when turning off dark mode
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const storeItems = [
+    { label: 'Electronic Store', href: '#' },
+    { label: 'Fashion Store', href: '#' },
+    { label: 'Grocery Store', href: '#' },
+    { label: 'Furniture Store', href: '#' },
+  ];
+
+  const productItems = [
+    { label: 'Large House Devices', href: '#' },
+    { label: 'Outdoor Living Products', href: '#' },
+    { label: 'Cooking Essentials', href: '#' },
+    { label: 'Animal Care Products', href: '#' },
+    { label: 'Food Products', href: '#' },
+    { label: 'Self-Care Products', href: '#' },
+  ];
+
+  const pageItems = [
+    { label: 'Action', href: '#' },
+    { label: 'Another Action', href: '#' },
+    { label: 'Something else here', href: '#' },
+  ];
+
+  const accountItems = [
+    { label: 'Action', href: '#' },
+    { label: 'Another Action', href: '#' },
+    { label: 'Something else here', href: '#' },
+  ];
 
   return (
-    <nav className=" darkmode navbar navbar-expand-lg bg-body-tertiary">
+    <nav className={darkMode ? "darkmode navbar navbar-expand-lg bg-body-tertiary" : "navbar navbar-expand-lg bg-body-tertiary"}>
       <div className="cnt-1">
         <h4>Contact us 24/7 +1 50 537 53 082</h4>
         <h4>🔥 The Biggest Sale Ever 50% Off</h4>
@@ -21,10 +67,10 @@ function Navbar() {
       </div>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-        <div className="navbar-icon">
-          <ion-icon name="infinite-outline" className="nav-icon"></ion-icon> 
-        </div>
-        <h1>Infinite</h1>
+          <div className="navbar-icon">
+            <ion-icon name="infinite-outline" className="nav-icon"></ion-icon>
+          </div>
+          <h1>Infinite</h1>
         </a>
 
         <button
@@ -43,140 +89,10 @@ function Navbar() {
                 Home
               </a>
             </li>
-            <li className="nav-item item-1">
-              <a href='#' type="button" class="nav-link link-2">Store<i class="fa-solid fa-angle-down"></i></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="item-content">
-                        Electronic Store
-                        <span class="arrow-container">
-                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="item-content">
-                        Fashion Store
-                        <span class="arrow-container">
-                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="item-content">
-                        Grocery Store
-                        <span class="arrow-container">
-                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="item-content">
-                        Furniture Store
-                        <span class="arrow-container">
-                          <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Products <i class="fa-solid fa-angle-down"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="item-content">
-                      Large House Devices
-                      <span class="arrow-container">
-                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="item-content">
-                      Outdoor Living Products
-                      <span class="arrow-container">
-                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="item-content">
-                      Cooking Essentials
-                      <span class="arrow-container">
-                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="item-content">
-                      Animal Care Products
-                      <span class="arrow-container">
-                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="item-content">
-                      Food Products
-                      <span class="arrow-container">
-                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="item-content">
-                      Self-Care Products
-                      <span class="arrow-container">
-                        <ion-icon name="chevron-forward-outline" id="frd-icon"></ion-icon>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pages <i class="fa-solid fa-angle-down"></i>
-              </a>
-              <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"/></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Account <i class="fa-solid fa-angle-down"></i>
-              </a>
-              <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"/></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
+            <DropdownMenu title="Store" items={storeItems} />
+            <DropdownMenu title="Products" items={productItems} />
+            <DropdownMenu title="Pages" items={pageItems} />
+            <DropdownMenu title="Account" items={accountItems} />
             <li className="nav-item">
               <a className="nav-link" href="#">
                 Docs
@@ -187,46 +103,47 @@ function Navbar() {
           <div className="navbar-end">
             <ul>
               <li>
-                <button className='end-link'>
+                <button className='end-link' onClick={toggleDarkMode}>
                   <ion-icon name="moon-outline" className="i moon"></ion-icon>
                   <ion-icon name="sunny-outline" className="i sun"></ion-icon>
                 </button>
               </li>
               <li><button className='end-link'><ion-icon name="cart-outline" className="i"></ion-icon></button></li>
-              <li><button className='end-link' onClick={() => setShowSearch(!showSearch)}><ion-icon name="search-outline" className="i" id="src-btn"></ion-icon></button>
-              {showSearch && (
-              <ul className='search'>
-                <form className="search-form d-flex">
-                  <input
-                    className="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                  />
-                  {search && ( // Show the icon only when there is text
-                    <ion-icon
-                      name="close-outline"
-                      className="clear-icon"
-                      onClick={() => setSearch("")}
-                    ></ion-icon>
-                  )}
-                  <button className="btn" type="submit">
-                    <ion-icon name="arrow-forward-outline" id="arrow-icon"></ion-icon>
-                  </button>
-                </form>
-              </ul>
-              )}
+              <li>
+                <button className='end-link' onClick={() => setShowSearch(!showSearch)}>
+                  <ion-icon name="search-outline" className="i" id="src-btn"></ion-icon>
+                </button>
+                {showSearch && (
+                  <ul className='search'>
+                    <form className="search-form d-flex">
+                      <input
+                        className="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                      />
+                      {search && (
+                        <ion-icon
+                          name="close-outline"
+                          className="clear-icon"
+                          onClick={() => setSearch("")}
+                        ></ion-icon>
+                      )}
+                      <button className="btn" type="submit">
+                        <ion-icon name="arrow-forward-outline" id="arrow-icon"></ion-icon>
+                      </button>
+                    </form>
+                  </ul>
+                )}
               </li>
-            </ul>  
-          </div>         
-
-          {/*  */}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

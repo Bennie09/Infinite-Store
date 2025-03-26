@@ -192,6 +192,18 @@
   animation: scaleEffect 0.3s ease-in-out;
 }
 
+.end-link .sun {
+  display: none;
+}
+
+.darkmode .end-link .moon {
+  display: none;
+}
+
+.darkmode .end-link .sun {
+  display: block;
+}
+
 .search {
   z-index: 10;
   position: absolute;
