@@ -40,9 +40,11 @@ const Navbar = () => {
   ];
 
   const pageItems = [
-    { label: 'Action', href: '#' },
-    { label: 'Another Action', href: '#' },
-    { label: 'Something else here', href: '#' },
+    { label: 'About', href: '#' },
+    { label: 'Blog', href: '#' },
+    { label: 'Contact', href: '#' },
+    { label: 'Help Center', href: '#' },
+    { label: 'Terms & Conditions', href: '#' },
   ];
 
   const accountItems = [

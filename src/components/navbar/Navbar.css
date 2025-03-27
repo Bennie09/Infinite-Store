@@ -1,21 +1,25 @@
 :root{
   --background: #f5f7fa;
   --background-2: #d7d8db;
+  --background-3: #fff;
   --white: #fff;
   --white-background: #fff;
   --grey: grey;
   --text-color: #000;
   --box-shodow-1: #dadada;
+  --drop-back: #fff;
 }
 
 .darkmode{
   --background: #1f252e;
   --background-2: #1f252e;
+  --background-3: #17191c;
   --white: #000;
   --white-background: #222933;
   --grey: grey;
   --text-color: #fff;
   --box-shodow-1: #111826;
+  --drop-back: #181d25;
 }
 
 .navbar {
@@ -113,7 +117,7 @@
 } */
 
 .dropdown-menu{
-  background: var(--white-background);
+  background: var(--drop-back);
   margin-top: 18px;
   border: none;
   box-shadow: 0 0 10px var(--box-shodow-1);
@@ -124,11 +128,19 @@
   font-size: 16px;
 }
 
+.dropdown-item:hover {
+  background: var(--background);
+}
+
 .item-content {
   color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.item-content:hover {
+  color: var(--text-color);
 }
 
 .arrow-container {
@@ -213,17 +225,22 @@
 
 .search-form{
   padding: 10px;
-  background: var(--white);
+  background: var(--background-3);
   border: none;
   border-radius: 100px;
+  box-shadow: 0 0 10px var(--box-shodow-1);
 }
 
 .search-form input {
+  background: var(--background-3);
+  color: var(--text-color);
   min-width: 100px;
   border: none;
 }
 
 .search-form input:focus{
+  color: var(--text-color);
+  background: var(--background-3);
   outline: none;
   box-shadow: none;
   border-color: inherit;
@@ -236,10 +253,10 @@
 .clear-icon {
   position: absolute;
   right: 55px;
-  top: 50%;
+  top: 49.5%;
   transform: translateY(-50%);
   font-size: 20px;
-  color: var(--grey);
+  color: var(--text-color);
   cursor: pointer;
 }
 
@@ -260,7 +277,7 @@
   color: var(--text-color);
   font-size: 15px;
   border: none;
-  padding-top: 4px;
+  padding-top: 6px;
 }
 
 
